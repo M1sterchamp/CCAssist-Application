@@ -1,6 +1,6 @@
 # 🚛 CCAssist Core
 
-![Version](https://img.shields.io/badge/version-1.1.8-yellow)
+![Version](https://img.shields.io/badge/version-1.1.10-yellow)
 ![Platform](https://img.shields.io/badge/platform-windows-blue)
 ![Electron](https://img.shields.io/badge/framework-Electron-FB3E44)
 
