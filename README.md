@@ -44,15 +44,15 @@ Prevent "Missing DLC" crashes or accidental usage of restricted parts.
 ---
 
 ## 📖 How to Use
-
-1. **Import:** Drag the event profile ZIP onto the Dashboard.
-2. **Sync:** (Optional) Use the "Sync Controls" tool to copy your keybinds.
-3. **Initialize:** Click **INITIALIZE TRUCKERSMP**. The app will configure your DLCs and launch the game.
-4. **Messenger:** If you need to send convoy instructions:
+1. **Authentication:** Open the app and click **LOG IN WITH DISCORD**. Your browser will open for verification. Once authorized, return to the app.
+2. **Import:** Drag the event profile ZIP onto the Dashboard.
+3. **Sync:** (Optional) Use the "Sync Controls" tool to copy your keybinds.
+4. **Initialize:** Click **INITIALIZE TRUCKERSMP**. The app will configure your DLCs and launch the game.
+4=5. **Messenger:** If you need to send convoy instructions:
     - Go to the **Auto Messenger** tab.
     - Input your message and set your delay.
     - Use **F9** to start and **F10** to stop. These can be configured to your liking in the panel.
-5. **Cleanup:** Once the event is over, click **TERMINATE SESSION**. The app will delete the temporary profile and re-enable all your DLCs.
+6. **Cleanup:** Once the event is over, click **TERMINATE SESSION**. The app will delete the temporary profile and re-enable all your DLCs.
 
 ---
 
@@ -62,6 +62,23 @@ Prevent "Missing DLC" crashes or accidental usage of restricted parts.
 - **Automation:** [RobotJS](http://robotjs.io/) for simulating in-game keystrokes.
 - **Updates:** [Electron-Updater](https://www.electron.build/auto-update) for mandatory system sync.
 - **Utilities:** Bundled `7z.exe` for archive handling and `SII_decrypt.exe` for profile parsing.
+- **Security:** Discord OAuth2 & API Key Header validation.
+
+---
+
+### 🔐 Discord Authentication & Whitelist
+The application is secured by a real-time whitelist system handled by the **Ghost Express API**.
+- **OAuth2 Handshake:** Secure login using official Discord credentials—no passwords stored.
+- **Persistent Sessions:** Remembers your authorization status. You only need to log in once unless your access is revoked.
+- **Live Verification:** Cross-references User IDs with a standalone SQLite database to prevent unauthorized access.
+
+---
+
+### 👑 Admin Management Hub
+A high-level interface for team leads to manage system access.
+- **Personnel List:** A full-width, searchable list of every authorized team member.
+- **Access Control:** Instantly grant access to new members or revoke permissions with a single click.
+- **Search & Filter:** Real-time filtering by Discord name or User ID for quick team audits.
 
 ---
 
@@ -70,6 +87,7 @@ Prevent "Missing DLC" crashes or accidental usage of restricted parts.
 - **OS:** Windows 10/11 (64-bit)
 - **Game:** Euro Truck Simulator 2 or American Truck Simulator.
 - **Permissions:** The app requires read/write access to your `Documents` and `AppData` folders to manage profiles and TruckersMP configs.
+- **Authorisation:** The app requires authorisation through your Discord ID to allow you access into the application. The only data stored is your Discord ID. Which upon removal from the team, also gets deleted.
 
 ---
 
